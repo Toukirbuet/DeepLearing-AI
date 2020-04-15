@@ -14,8 +14,9 @@ def predict(w, b, X):
     # Compute vector "A" predicting the probabilities of a cat being present in the picture
     ### START CODE HERE ### ( 1 line of code)
     A = sigmoid(np.dot(w.T,X)+b)
+    #print("A=",A)
     ### END CODE HERE ###
-    for i in range(A.shape[1]):
+    for i in range(A.shape[1]):#for m images
     # Convert probabilities A[0,i] to actual predictions p[0,i]
     ### START CODE HERE ### ( 4 lines of code)
         if A[0][i]<=0.5:
