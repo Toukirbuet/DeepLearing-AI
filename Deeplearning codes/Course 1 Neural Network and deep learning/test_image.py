@@ -16,15 +16,16 @@ import propagate
 from predict import predict
 from optimize import optimize
 from prepare_data import prepare_data
-def test_image(folder_name,num_px,d):
-    loaded_images = list()
-    for filename in listdir(folder_name):
+def test_image(folder_name,num_px,d,classes):
+   loaded_images = list()
+   for filename in listdir(folder_name):
     	# load image
     	#img_data = image.imread('images/' + filename)
     	# store loaded image
     	
     	#print('> loaded %s %s' % (filename, img_data.shape))
-        fname = folder_name+"/" + filename
+        fname = "images/" + filename
+        
         img_org=Image.open(fname)
         img = img_org.resize((num_px,num_px), Image.ANTIALIAS)
         #loaded_images.append(img_org)
@@ -35,4 +36,5 @@ def test_image(folder_name,num_px,d):
         print("Filename:"+filename+" y = " + str(np.squeeze(my_predicted_image)) + ", your algorithm predicts a \"" +classes[int(np.squeeze(my_predicted_image)),].decode("utf-8") + "\"picture.")
         #img_org.show()
         loaded_images.append(img_org)
-        loaded_images[2].show()
+        return loaded_images
+        #loaded_images[4].show()

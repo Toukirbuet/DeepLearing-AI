@@ -23,7 +23,7 @@ from optimize import optimize
 from prepare_data import prepare_data
 from test_image import test_image
 
-train_set_x, train_set_y, test_set_x, test_set_y,num_px=prepare_data()
+train_set_x, train_set_y, test_set_x, test_set_y,num_px,classes=prepare_data()
 
 def model(X_train, Y_train, X_test, Y_test, num_iterations = 2000, learning_rate = 0.5, print_cost = False):
     w, b = initialize_with_zeros(X_train.shape[0])
@@ -47,8 +47,8 @@ def model(X_train, Y_train, X_test, Y_test, num_iterations = 2000, learning_rate
     "num_iterations": num_iterations}
     return d
 d = model(train_set_x, train_set_y, test_set_x, test_set_y, num_iterations = 2000, learning_rate = 0.005, print_cost = True)
-#test_image('images',num_px,d)
-
+#loaded_images=test_image('images',num_px,d,classes)
+#loaded_images[1].show() 
 loaded_images = list()
 for filename in listdir('images'):
 	# load image
@@ -68,4 +68,5 @@ for filename in listdir('images'):
     print("Filename:"+filename+" y = " + str(np.squeeze(my_predicted_image)) + ", your algorithm predicts a \"" +classes[int(np.squeeze(my_predicted_image)),].decode("utf-8") + "\"picture.")
     #img_org.show()
     loaded_images.append(img_org)
-loaded_images[4].show()   
+loaded_images[-1].show()
+    
