@@ -27,6 +27,7 @@ def L_model_backward(AL, Y, caches):
     """
     grads = {}
     L = len(caches) # the number of layers
+    print('L=========',L)
     m = AL.shape[1]
     Y = Y.reshape(AL.shape) # after this line, Y is the same shape as AL
 
@@ -45,6 +46,7 @@ def L_model_backward(AL, Y, caches):
         # lth layer: (RELU -> LINEAR) gradients.
         # Inputs: "grads["dA" + str(l + 2)], caches". Outputs: "grads["dA" + str(l + 1)] , grads["dW" + str(l + 1)] , grads["db" + str(l + 1)] 
         ### START CODE HERE ### (approx. 5 lines)
+        print('l=========',l)
         current_cache = caches[l]
         dA_prev_temp, dW_temp, db_temp = linear_activation_backward(grads["dA" + str(l + 2)], current_cache, "relu")
         grads["dA" + str(l + 1)] = dA_prev_temp
@@ -54,7 +56,7 @@ def L_model_backward(AL, Y, caches):
 
     return grads
 
-'''
+
 
 def L_model_backward_test_case():
     np.random.seed(3)
@@ -81,4 +83,3 @@ def L_model_backward_test_case():
 AL, Y_assess, caches = L_model_backward_test_case()
 grads = L_model_backward(AL, Y_assess, caches)
 print(grads)
-'''

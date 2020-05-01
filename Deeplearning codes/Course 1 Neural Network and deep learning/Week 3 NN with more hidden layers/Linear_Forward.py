@@ -30,7 +30,6 @@ def linear_forward(A, W, b):
     cache = (A, W, b)
 
     return Z, cache
-'''
 #Test case
 def linear_forward_test_case():
     np.random.seed(1)
@@ -44,4 +43,3 @@ A, W, b = linear_forward_test_case()
 
 Z, linear_cache = linear_forward(A, W, b)
 print("Z = " + str(Z))
-'''

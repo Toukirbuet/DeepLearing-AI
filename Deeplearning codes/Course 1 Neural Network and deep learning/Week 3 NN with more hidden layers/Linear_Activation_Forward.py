@@ -44,7 +44,7 @@ def linear_activation_forward(A_prev, W, b, activation):
 
     return A, cache
 
-'''
+
 #Testing LAF
 def linear_activation_forward_test_case():
     np.random.seed(2)
@@ -56,8 +56,7 @@ def linear_activation_forward_test_case():
 A_prev, W, b = linear_activation_forward_test_case()
 
 A, linear_activation_cache = linear_activation_forward(A_prev, W, b, activation = "sigmoid")
-print("With sigmoid: A = " + str(A))
+print("With sigmoid: A = " + str(A.shape))
 
 A, linear_activation_cache = linear_activation_forward(A_prev, W, b, activation = "relu")
-print("With ReLU: A = " + str(A))
-'''
+print("With ReLU: A = " + str(A.shape))

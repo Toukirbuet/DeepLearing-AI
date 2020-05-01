@@ -21,11 +21,12 @@ def initialize_parameters_deep(layer_dims):
     np.random.seed(3)
     parameters = {}
     L = len(layer_dims)            # number of layers in the network
-    #print('length of layer dims:',L)
+    print('length of layer dims:',L)
 
     for l in range(1, L):
         ### START CODE HERE ### (≈ 2 lines of code)
-        parameters['W' + str(l)] = np.random.randn(layer_dims[l], layer_dims[l-1])*0.01
+        #print(np.random.randn(layer_dims[l], layer_dims[l-1]))
+        parameters['W' + str(l)] = np.random.randn(layer_dims[l], layer_dims[l-1])/ np.sqrt(layer_dims[l-1])#*0.01
         parameters['b' + str(l)] = np.zeros((layer_dims[l], 1))
         ### END CODE HERE ###
 
@@ -34,11 +35,10 @@ def initialize_parameters_deep(layer_dims):
 
 
     return parameters
-'''
-checking dimensions
-parameters = initialize_parameters_deep([5,4,3])
+
+#checking dimensions
+parameters = initialize_parameters_deep([2,2,1])
 print("W1 = " + str(parameters["W1"]))
 print("b1 = " + str(parameters["b1"]))
 print("W2 = " + str(parameters["W2"]))
 print("b2 = " + str(parameters["b2"]))
-'''
