@@ -221,7 +221,9 @@ def plot_decision_boundary(model, X, y):
     plt.contourf(xx, yy, Z, cmap=plt.cm.Spectral)
     plt.ylabel('x2')
     plt.xlabel('x1')
-    plt.scatter(X[0, :], X[1, :], c=y.reshape(300), cmap=plt.cm.Spectral)
+    t=y.shape
+    #print('t=================================',t)
+    plt.scatter(X[0, :], X[1, :], c=y.reshape(t[1]), cmap=plt.cm.Spectral) #y.reshape(300)
     plt.show()
     
 def predict_dec(parameters, X):
