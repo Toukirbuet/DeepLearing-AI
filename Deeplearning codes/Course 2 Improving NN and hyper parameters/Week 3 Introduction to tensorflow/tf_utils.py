@@ -7,7 +7,7 @@ Created on Sun May 17 01:39:31 2020
 
 import h5py
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import math
 
 def load_dataset():

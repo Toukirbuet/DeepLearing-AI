@@ -1,0 +1,9 @@
+
+checking version:
+https://stackoverflow.com/questions/50622525/which-tensorflow-and-cuda-version-combinations-are-compatible
+
+link to install:
+https://www.youtube.com/watch?v=xQVOaTUm9lM
+
+
+https://www.youtube.com/watch?v=tPq6NIboLSc&pbjreload=10

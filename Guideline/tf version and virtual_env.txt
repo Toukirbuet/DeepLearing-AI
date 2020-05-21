@@ -1,0 +1,12 @@
+CNN and tensorflow based projects use tf.contrib which is no longer supported in TF 2.x
+so have to create a virtual environment of python 3.6 named DLP36 and install tensorflow 1.2.1 in it 
+
+conda install -n DLP36 -c conda-forge tensorflow=1.2.1
+
+# To activate this environment, use
+#
+#     $ conda activate DLP36
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate

@@ -23,7 +23,7 @@ from adam import *
 plt.rcParams['figure.figsize'] = (7.0, 4.0) # set default size of plots
 plt.rcParams['image.interpolation'] = 'nearest'
 plt.rcParams['image.cmap'] = 'gray'
-#train_X, train_Y = load_dataset()
+train_X, train_Y = load_dataset()
 # GRADED FUNCTION: random_mini_batches
 
 def random_mini_batches(X, Y, mini_batch_size = 64, seed = 0):
