@@ -5,12 +5,14 @@ Created on Sun May 17 01:42:49 2020
 @author: Real
 """
 '''
-"Session()" has been removed with TF 2.0.
+"This code is run using tf 2.1.0 gpu
+Session()" has been removed with TF 2.0.
 I inserted two lines. 
 One is tf.compat.v1.disable_eager_execution() 
 and the other is sess = tf.compat.v1.Session() # instead of tf.Session()
 '''
 import math
+import time
 import numpy as np
 import h5py
 import matplotlib.pyplot as plt
@@ -18,18 +20,22 @@ from os import listdir
 import tensorflow.compat.v1 as tf
 from tensorflow.python.framework import ops
 from tf_utils import load_dataset, random_mini_batches, convert_to_one_hot, predict
-tf.disable_eager_execution()
+#tf.disable_eager_execution()
 #created modules
 from Create_Placeholders import  create_placeholders
 from Initialize_Parameters import initialize_parameters
 from Forward_Propagation import forward_propagation
 from Compute_Cost import compute_cost
+tf.config.experimental.list_physical_devices('GPU') 
+tf.debugging.set_log_device_placement(True)
 
 #testing image
 import scipy
 from PIL import Image
 from scipy import ndimage
 from skimage.transform import resize
+
+start_time = time.time()
 
 #matplotlib inline
 np.random.seed(1)
@@ -198,3 +204,4 @@ for i in range(num_images):
     plt.imshow(loaded_images[i])
     plt.axis('off')
     plt.title(Fname_images[i])
+print("---Execution time  %s seconds ---" % (time.time() - start_time))

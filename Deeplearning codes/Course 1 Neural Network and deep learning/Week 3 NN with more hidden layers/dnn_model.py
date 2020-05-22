@@ -16,6 +16,7 @@ from scipy import ndimage
 from testCases_v3 import *
 from dnn_app_utils_v3 import *
 
+
 '''
 from Initialize_Parameters import initialize_parameters_deep
 from L_Model_Forward import L_model_forward
@@ -25,6 +26,9 @@ from Compute_Cost import compute_cost
 from Predict import predict
 '''
 #matplotlib inline
+start_time = time.time()
+
+
 plt.rcParams['figure.figsize'] = (5.0, 4.0) # set default size of plots
 plt.rcParams['image.interpolation'] = 'nearest'
 plt.rcParams['image.cmap'] = 'gray'
@@ -162,3 +166,4 @@ loaded_images[-1].show()
 
 #printing mislabeled images of test set below
 print_mislabeled_images(classes, test_x, test_y, pred_test)
+print("---Execution time  %s seconds ---" % (time.time() - start_time))
