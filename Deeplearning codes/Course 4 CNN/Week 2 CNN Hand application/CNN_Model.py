@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed May 20 17:45:23 2020
+this code is run using tf 1.2.1
 
 @author: Real
 """

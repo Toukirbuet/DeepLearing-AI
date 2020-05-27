@@ -7,4 +7,5 @@ https://awesomeopensource.com/project/Gurupradeep/deeplearning.ai-Assignments
 
 updated links below
 http://digtime.cn/articles/268/shi-yong-tensorflow-gou-jian-yi-ge-wan-zheng-de-ren-gong-zhi-neng-cheng-xu
+http://vernlium.github.io/2018/10/25/coursera-deeplearning-ai-c4-week2/
 https://blog.csdn.net/Koala_Tree/article/details/78092337?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-6&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-6

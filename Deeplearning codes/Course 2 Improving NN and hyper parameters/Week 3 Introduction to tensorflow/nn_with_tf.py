@@ -17,7 +17,7 @@ import numpy as np
 import h5py
 import matplotlib.pyplot as plt
 from os import listdir
-import tensorflow.compat.v1 as tf
+import tensorflow.compat.v1 as tf #tf 2
 from tensorflow.python.framework import ops
 from tf_utils import load_dataset, random_mini_batches, convert_to_one_hot, predict
 #tf.disable_eager_execution()

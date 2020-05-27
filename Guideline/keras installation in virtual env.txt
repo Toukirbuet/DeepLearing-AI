@@ -1,0 +1,2 @@
+pip install keras=2.0.7
+(in DLP36)
